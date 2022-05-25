@@ -11,10 +11,12 @@ source:
     folder: rmm
 
 build:
-  number: 1
+  number: 2
   skip: true  # [(not linux) or (cuda_compiler_version == "None")]
   run_exports:
     - {{ pin_subpackage(name, max_pin="x.x") }}
+    - {{ pin_subpackage("thrust", exact=True) }}
+    - {{ pin_subpackage("cub", exact=True) }}
   script_env:
     # for some reason /usr/local/cuda is not added to $PATH in the docker image
     - CUDA_HOME  # [ppc64le or aarch64]
@@ -29,9 +31,11 @@ requirements:
   host:
     - spdlog
     - thrust >=1.9.0
+    - cub >=1.9.0
   run:
     # - spdlog >=1.8.5  # (version constraint set via run_exports)
     - thrust >=1.9.0
+    - cub >=1.9.0
 
 test:
   commands:
