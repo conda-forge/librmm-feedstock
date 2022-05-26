@@ -26,8 +26,8 @@ cmake -DCMAKE_INSTALL_PREFIX="${INSTALL_PREFIX}" \
       -DBUILD_TESTS=${BUILD_TESTS} \
       -DBUILD_BENCHMARKS=${BUILD_BENCHMARKS} \
       -DCPM_LOCAL_PACKAGES_ONLY=ON \
-      -DCPM_Thrust_SOURCE=${PREFIX} \
-      -DCPM_spdlog_SOURCE=${PREFIX} \
+      -DThrust_ROOT=${PREFIX} \
+      -Dspdlog_ROOT=${PREFIX} \
       -B "${LIBRMM_BUILD_DIR}" \
       -S .
 
