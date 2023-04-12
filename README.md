@@ -1,11 +1,11 @@
-About librmm
-============
+About librmm-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/librmm-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/rapidsai/rmm
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/librmm-feedstock/blob/main/LICENSE.txt)
 
 Summary: RAPIDS Memory Manager
 
